@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "simplemde": "^1.11.2",
+    "tinacms": "^1.5.26"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.5.36",
+    "@types/node": "^20.10.0"
+  }
+}

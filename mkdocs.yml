@@ -1,0 +1,224 @@
+site_name: Anxiu's Note
+site_url: https://anxiu0101.github.io
+site_author: Anxiu
+site_description: 安修(Anxiu)的笔记站
+repo_name: Anxiu0101/note
+repo_url: https://github.com/Anxiu0101/Anxiu0101.github.io
+edit_uri: edit/master/docs/
+copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://anxiu.cloud/">Anxiu's Note</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Anxiu0101">Anxiu</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+
+theme:
+  name: material
+  language: 'zh'
+  icon:
+    logo: material/notebook-outline
+    edit: material/pencil
+    view: material/eye
+  custom_dir: overrides
+  features:
+  - content.action.edit     # page source code edit in Github.
+  - content.action.view     # page source code view.
+  - content.code.annotate
+  - content.code.copy
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.path
+  - navigation.indexes
+  - navigation.top
+  - navigation.footer
+  - search.share
+  - search.suggest
+  - toc.follow
+  # have set in css file.
+  #  font:
+  #    text: Roboto, Fira Code
+  #    code: Fira Code
+  palette:
+    - scheme: default # 日间模式
+      primary: deep
+      accent: blue # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: Dark # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light
+
+markdown_extensions:
+  - toc:                  # Table of Content
+      permalink: "#"
+      baselevel: 1
+      separator: "-"
+      # slugify: !!python/name:pymdownx.slugs.uslugify
+  - meta                  # file metadata support
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - footnotes
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.keys
+  - pymdownx.mark         # text highlight
+  - pymdownx.tilde        # remove line support
+  - pymdownx.caret        # underline support
+  - pymdownx.critic
+  - pymdownx.details      # Admonition fold support
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.saneheaders # 严格标题格式
+
+extra:
+  annotation:
+    json: [.s2]
+  analytics:
+    provider: google
+    property: G-0MED3RPS23
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Anxiu0101
+    - icon: fontawesome/solid/rss
+      link: https://rss.anxiu.cloud
+    - icon: fontawesome/brands/researchgate
+      link: https://www.researchgate.net/profile/Yuchen-Fang-13
+    - icon: fontawesome/solid/inbox
+      link: mailto:anxiu.fyc@foxmail.com
+  link:
+    - icon: fontawesome/solid/home
+      link: https://anxiu0101.github.io/note
+
+extra_css:
+  - stylesheets/tasklist.css
+  - stylesheets/custom.css
+  - stylesheets/card.css
+  - stylesheets/font.css
+
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # font style
+  - https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css # simplemde -> online markdown editor style.
+#  - stylesheets/flink.css
+#  - stylesheets/changelog_extra.css
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+  - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js # mermaid support
+  - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js # simplemde -> online markdown editor support.
+
+plugins:
+  # - rss
+  - glightbox:
+      width: 80%
+#  - statistics
+  - search:
+      lang:
+        - en
+      separator: '[\s\u200b\-]'
+  - offline
+  - tags
+  # - git-revision-date-localized:
+  #     custom_format: "%d. %B %Y"
+  #     timezone: Asia/Hong_Kong
+  #     locale: en
+  #     fallback_to_build_date: false
+  #     enable_creation_date: true
+  #     exclude:
+  #       - index.md
+  #     enabled: true
+  #     strict: false # control log level; when false, on info.
+  - git-committers:
+      repository: Anxiu0101/Anxiu0101.github.io
+      branch: master
+      token: !!python/object/apply:os.getenv [ "MKDOCS_GIT_COMMITTERS_APIKEY" ]
+  - changelog:
+      file: changelog.yml
+
+nav:
+- index.md
+- writing-online.md
+- Comp-Sci:
+  - cs/index.md
+# — 编程语言 —————————————————————————————————————————————————————
+  - Program Lang:
+    - Python:
+      - Python Virtual Environment: cs/lang/py/Python-venv.md
+    - Golang:
+      - Interface in Go: cs/lang/go/interface-in-go.md
+# — 算法原理 —————————————————————————————————————————————————————
+  - Algorithm:
+      - Raft Algorithm: cs/algorithm/raft.md
+- Web-Dev:
+    - web/index.md
+# — 部署记录与一些开发工具的使用 —————————————————————————————————————
+    - Deploy & Tools:
+        - Config MySQL in Ubuntu: web/deploy/mysql-in-ubuntu.md
+        - Nginx Introduction: web/deploy/nginx-intro.md
+        - Config PostgreSQL in Docker: web/deploy/postgre-in-docker.md
+        - Docker Introduction: web/deploy/docker-intro.md
+        - Dockerfile Introduction: web/deploy/dockerfile-intro.md
+        - Espanso simple use: web/deploy/espanso-intro.md
+        - Systemctl Introduction: web/deploy/systemctl-intro.md
+        - Config ssh in Win: web/deploy/win-ssh-config.md
+# — 开发记录 ——————————————————————————————————————————————————————
+    - Development:
+        - Golang Optional Pattern: web/dev/golang-optional-pattern.md
+        - Compiler a Go Project: web/dev/go-project-compiler.md
+        - Use tencent SMS in Go: web/dev/golang-tencent-SMS.md
+        - Gorm struct label Guide: web/dev/gorm-struct-label.md
+- Research:
+  - rsc/index.md
+  - Machine Learning:
+    - rsc/ml/index.md
+  - Security:
+    - rsc/sec/index.md
+- Others:
+  - oth/index.md
+  # - Resume:
+  #   - cv.pdf
+# — 建站记录 ——————————————————————————————————————————————————————
+  - Blog Build:
+    - Markdown 语法测试: oth/blog/Markdown-Grammar.md
+    - Mkdocs 建站指南: oth/blog/Build your personal MkDocs Site.md
+    - Changelog: changelog/index.md
+
+#not_in_nav: writing-online.md

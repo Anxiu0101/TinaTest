@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "github-com/anxiu0101/note"
+version = "0.1.0"
+description = "The Anxiu's Personal Website Build by Mkdocs Material."
+authors = ["Anxiu <anxiu.fyc@foxmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [{include = "github"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs = "^1.5.3"
+mkdocs-material = {extras = ["imaging"], version = "^9.4.5"}
+mkdocs-git-revision-date-localized-plugin = "^1.2.0"
+mkdocs-glightbox = "^0.3.4"
+pymdown-extensions = "^10.3"
+mkdocs-rss-plugin = "^1.8.0"
+neoteroi-mkdocs = "^1.0.4"
+mkdocs-jupyter = "^0.24.5"
+mkdocs-statistics-plugin = "^0.1.2"
+python-markdown-math = "^0.8"
+mkdocs-with-pdf = "^0.9.3"
+mkdocs-git-authors-plugin = "^0.7.2"
+mkdocs-git-committers-plugin = "^0.2.2"
+mkdocs-git-revision-date-plugin = "^0.3.2"
+mkdocs-changelog-plugin = "^0.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
